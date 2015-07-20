@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Vendor: Pivotal Software, Inc.
-Implementation-Title: spring-mvc
-Implementation-Version: 0.0.1-SNAPSHOT
-Implementation-Vendor-Id: com.vg.spring.mvc
-Build-Jdk: 1.7.0_71
-Built-By: vladimir
-Created-By: Maven Integration for Eclipse
-
