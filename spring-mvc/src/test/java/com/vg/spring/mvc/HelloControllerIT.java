@@ -21,12 +21,13 @@ import org.springframework.web.client.RestTemplate;
  * 
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = Application.class)
+@SpringApplicationConfiguration(classes = ApplicationMvcRest.class)
 @WebAppConfiguration
 @IntegrationTest({ "server.port=0" })
 
 /**
  * Has annotation integration test and could be executed as simple test
+ * 
  * @author vladimir
  *
  */
@@ -46,9 +47,8 @@ public class HelloControllerIT {
 
 	@Test
 	public void getHello() throws Exception {
-		ResponseEntity<String> response = template.getForEntity(
-				base.toString(), String.class);
-		System.out.println("Body: " + response.getBody() + " \n\n\n");
+		ResponseEntity<String> response = template.getForEntity(base.toString(), String.class);
+		System.out.println("Body: " + response.getBody());
 		assertEquals(response.getBody(), "Greetings from Spring Boot!");
 	}
 }
