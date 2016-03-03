@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.web.SpringBootServletInitializer;
 import org.springframework.context.ApplicationContext;
 
 /**
@@ -11,11 +13,18 @@ import org.springframework.context.ApplicationContext;
  * 
  */
 @SpringBootApplication
-public class ApplicationMvcJsp {
+public class ApplicationMvcJsp extends SpringBootServletInitializer {
+
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(ApplicationMvcJsp.class);
+	}
 
 	/**
-	 * From eclipse just need to run this class as java application!
-	 * from command line something like : mvn package && java -jar target/gs-spring-boot-0.1.0.jar
+	 * From eclipse just need to run this class as java application! from
+	 * command line something like : mvn package && java -jar
+	 * target/gs-spring-boot-0.1.0.jar
+	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {

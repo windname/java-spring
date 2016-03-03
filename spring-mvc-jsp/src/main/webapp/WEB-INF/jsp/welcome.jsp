@@ -2,7 +2,7 @@
 
 <html lang="en">
 <head>
-	<title>Welcome</title>
+	<title>Welcome!!</title>
 </head>
 <body>
 	welcome! ${msg}

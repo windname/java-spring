@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-
+	<modelVersion>4.0.0</modelVersion>	
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.2.5.RELEASE</version>
+		<relativePath /> 
+	</parent>
 	<groupId>com.vg.spring.mvc.jsp</groupId>
 	<artifactId>spring-mvc-jsp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -10,13 +15,6 @@
 
 	<name>spring-mvc</name>
 	<description>spring-mvc</description>
-
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.2.5.RELEASE</version>
-		<relativePath /> 
-	</parent>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -73,6 +71,15 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin> -->
+	<!-- Unfortunately cannot copy war to docker dir -->
+	<!-- <plugin>
+		<artifactId>maven-war-plugin</artifactId>
+		<version>2.6</version>
+		<configuration>
+			<failOnMissingWebXml>false</failOnMissingWebXml>
+			<outputDirectory>/home/vladimir/projects/java-tool/docker-proj/tomcat/apache-tomcat-7.0.63/webapps/</outputDirectory>
+		</configuration>
+	</plugin> -->
 		</plugins>
 	</build>
 
